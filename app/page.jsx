@@ -1,9 +1,12 @@
 const Home = () => {
   return (
     <section className="w-full flex-center flex-col">
-      <h1 className="head_text text-center">UHC@HOME</h1>
-      <br className = "max-md:hidden" />
-      <span>Bringing the Doctor to you!</span>
+      <h1 className="head_text text-center">UHC@HOME
+        <br className = "max-md:hidden" />
+        <span className="orange_gradient text-center">TAGLINE THAT I CAN'T THINK OF</span>
+      </h1>
+
+      <p className="desc text-center">UHC@HOME is a tool designed to streamline the process of seeking medical aid at the University Health Center</p>
     </section>
   )
 }
