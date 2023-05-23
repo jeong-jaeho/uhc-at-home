@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders} from "next-auth/react";
 
 
+
 const Nav = () => {
 
   const isLoggedIn = true;
@@ -41,7 +42,7 @@ const Nav = () => {
         </Link>
 
         <Link
-          href="/faq"
+          href="faq"
           className="dropdown_link"
           onClick = {() => setToggleDropdown(false)}
         >
