@@ -110,21 +110,7 @@ const Nav = () => {
                     Join Queue
                   </Link>
 
-                  <Link
-                    href="/contact"
-                    className="dropdown_link"
-                    onClick = {() => setToggleDropdown(false)}
-                  >
-                    Contact Us
-                  </Link>
 
-                  <Link
-                    href="/faq"
-                    className="dropdown_link"
-                    onClick = {() => setToggleDropdown(false)}
-                  >
-                    FAQ
-                  </Link>
 
                   <button type="button" onClick={() => {
                     setToggleDropdown(false)
