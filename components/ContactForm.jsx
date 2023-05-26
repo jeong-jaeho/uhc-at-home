@@ -1,63 +1,43 @@
 "use client"
 
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-  const [isSending, setIsSending] = useState(false);
-  const [isSent, setIsSent] = useState(false);
-  const [error, setError] = useState(null);
+
+  const resetField = () => {
+    setEmail("");
+    setMessage(""); 
+    setSubject(""); 
+    setName("");
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate form data
-    if (!name || !email || !message) {
-      setError('Please fill in all fields.');
-      return;
-    }
-
-    setIsSending(true);
-
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, message }),
-      });
-
-      if (response.ok) {
-        setIsSent(true);
-        setName('');
-        setEmail('');
-        setMessage('');
-        setError(null);
-      } else {
-        throw new Error('Unable to send email.');
-      }
-    } catch (error) {
-      setError(error.message);
-    } finally {
-      setIsSending(false);
-    }
+    emailjs.sendForm("service_xf725qi", "template_2va15ao", e.target, "wH0cTcKyXxGeyTsgQ" )
+    .then((result) => {
+      console.log(result.text)
+      alert("Email has been sent");
+    }, (error) => {
+      console.log(error.text)
+    });
+    resetField();
+    e.target.reset();
   };
 
   return (
     <div>
       <h1 style={{fontWeight: "bold"}}>For any queries or feedback, please send us an email here!</h1><br/>
-      {isSent ? (
-        <p>Email sent successfully.</p>
-      ) : (
         <form onSubmit={handleSubmit} className=''>
-          {error && <p>Error: {error}</p>}
           <label htmlFor="name">Name:</label><br/>
           <input
             type="text"
-            id="name"
+            name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -67,16 +47,27 @@ function ContactForm() {
           <label htmlFor="email">Email:</label><br/>
           <input
             type="email"
-            id="email"
+            name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
             className="form_input"
           /><br />
 
+          <label htmlFor="subject">Subject:</label><br/>
+          <input
+            type="text"
+            name="subject"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+            required
+            className="form_input"
+          /><br />
+
+
           <label htmlFor="message">Message:</label><br />
           <textarea
-            id="message"
+            name="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             rows="5"
@@ -84,11 +75,10 @@ function ContactForm() {
             className="form_input"
           ></textarea><br />
 
-          <button type="submit" disabled={isSending} className='black_btn'>
-            {isSending ? 'Sending...' : 'Send'}
+          <button type="submit" className='black_btn'>
+            Send
           </button>
         </form>
-      )}
     </div>
   );
 }
