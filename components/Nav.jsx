@@ -22,31 +22,6 @@ const Nav = () => {
 
   return (
     <nav className="flex-between w-full mg-16 pt-3">
-<<<<<<< HEAD
-        <Link href="/" className="flex gap-2 flex-center">
-            <Image
-            src = "/assets/LOGONOBG.png"
-            alt = "UHC@HOME logo"
-            width={100}
-            height={50}
-            className="object-contain" />
-        </Link>
-        <Link
-          href="/contact"
-          className=""
-          onClick = {() => setToggleDropdown(false)}
-        >
-          Contact Us
-        </Link>
-
-        <Link
-          href="faq"
-          className=""
-          onClick = {() => setToggleDropdown(false)}
-        >
-          FAQ
-        </Link>
-=======
       <Link href="/" className="flex gap-2 flex-center">
         <Image
           src="/assets/LOGONOBG.png"
@@ -64,7 +39,6 @@ const Nav = () => {
       >
         About
       </Link>
->>>>>>> bf40902e0222e99b27533163a894502cdd558ed5
 
       <Link
         href="/contact"
