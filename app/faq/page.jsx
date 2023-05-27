@@ -9,7 +9,7 @@ const faq = () => {
       <a 
       href = "https://nus.edu.sg/uhc/resources/faq/faq"
       className='flex-center w-full mg-16 pt-3'>
-        Link to UHC's FAQ
+        UHC's FAQ page
       </a>
     </>
   )
