@@ -59,7 +59,9 @@ React/Next.js
 PostgresSQL
 
 - Database system for storing user login ID and password as well as live updating the number of people in the queue for UHC consultations
-  GitHub/GitHub Desktop
+
+GitHub/GitHub Desktop
+
 - Source Control
 
 Postman
