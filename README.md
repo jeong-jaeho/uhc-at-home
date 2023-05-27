@@ -67,4 +67,4 @@ React/Next.js
 
 ### Activity diagram (in the perspective of the user)
 
-image.png
+![Activity diagram](./public/assets/activityDiagram.png)
