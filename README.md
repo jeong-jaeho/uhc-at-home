@@ -31,6 +31,13 @@ https://github.com/itsNatTan/UHC-HOME
 - Pitch Video:
   https://drive.google.com/file/d/19jx5SllhcOVJqyTKHaY38GMat9WlI9WW/view?usp=share_link
 
+### Milestone 1
+
+- Milestone 1 Poster:
+  https://drive.google.com/file/d/1X9JEe8-_wZUj2m3UHfqwy7PVDyRAxZqB/view?usp=sharing
+- Milestone 1 Video:
+  https://drive.google.com/file/d/14wDlenqoPLemmd-6agQmLaezBDzq8S0f/view?usp=sharing
+
 ### Project Motivation
 
 - UHC is the place NUS students go to whenever we feel unwell and need doctor consultations and medication. However, oftentimes the queue is far too long, needlessly increasing the time spent at the clinic. It takes time to do registration in person in order to verify student status and to do relevant paperwork for medical chart entry. We simply cannot see the end of queueing, getting out of queue for consultations only to find ourselves queueing yet again for medicine prescriptions.
@@ -52,26 +59,43 @@ https://github.com/itsNatTan/UHC-HOME
 
 ### Tech Stack
 
-React/Next.js
+- React/Next.js:
+  Using React hooks and a collection of JS, CSS, and JSX files
+- PostgresSQL:
+  Database system for storing user login ID and password as well as live updating the number of people in the queue for UHC consultations
+- GitHub/GitHub Desktop:
+  Source Control
+- Postman:
+  To be used for backend testing, sending requests to the server, and receiving the response back from the server,
+  To connect to PostgresSQL database and allow pulling of data
+- Telegram chatbot API/TeleBot package:
+  Additional feature to be added later for dealing with commonly asked questions and providing answers and guidance
 
-- Using React hooks and a collection of JS, CSS, and JSX files
+### Technical documentation
 
-PostgresSQL
+![layout.jsx](./public/assets/1.png)
+We decided to use Next.js, as it is a recently introduced tool that makes web development much simpler. By using Next.js, any children folders of the app folder becomes the directory link name that can be used for routing, much easier than how routing can be implemented in normal React and node.js usage.
 
-- Database system for storing user login ID and password as well as live updating the number of people in the queue for UHC consultations
+We used layout.jsx file to set a standardized rendered structure for all children files of the app folder so that the navigation bar is always at the top of the page and the children page content gets displayed below the nav bar.
 
-GitHub/GitHub Desktop
+![layout.jsx](./public/assets/2.png)
+One of the children files of the app folder is the page.jsx, used for home page content.
 
-- Source Control
+![layout.jsx](./public/assets/3.png)
+By creating components, they can be reused in each individual page. For instance, this Nav.jsx component can be placed in the Layout.jsx in the app folder, such that every page in the folder will have the navigation bar without a need to create it again for each page.
 
-Postman
+States allow us to create dynamic and interactive components without the need for re-rendering the entire page. React will re-render that specific component to update the state, reducing the amount of rendering and hence speed.
 
-- To be used for backend testing, sending requests to the server, and receiving the response back from the server
-- To connect to PostgresSQL database and allow pulling of data
+### Screenshots of currently updated project (Dynamic web sizing implemented)
 
-Telegram chatbot API/TeleBot package
+When in big screen mode:
+![layout.jsx](./public/assets/4.png)
+When in large screen, all the nav bar buttons are displayed fully.
+Once each page button of the nav bar is clicked, it’s routed to a new page with the respective pages that serve the purpose of their names.
 
-- Additional feature to be added later for dealing with commonly asked questions and providing answers and guidance
+When in small screen mode:
+![layout.jsx](./public/assets/5.png)
+By creating 2 different display modes depending on window/screen size, we are able to customize the page to suit the needs of the screen size. For instance, the display with the buttons is more suitable for a larger screen, whereas it will be moved under a dropdown menu if the screen is smaller to maintain aesthetics.
 
 ### Activity diagram (in the perspective of the user)
 
