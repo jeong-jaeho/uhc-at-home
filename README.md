@@ -73,29 +73,38 @@ https://github.com/itsNatTan/UHC-HOME
 
 ### Technical documentation
 
-![layout.jsx](./public/assets/1.png)
-We decided to use Next.js, as it is a recently introduced tool that makes web development much simpler. By using Next.js, any children folders of the app folder becomes the directory link name that can be used for routing, much easier than how routing can be implemented in normal React and node.js usage.
+![1](./public/assets/1.png)
 
-We used layout.jsx file to set a standardized rendered structure for all children files of the app folder so that the navigation bar is always at the top of the page and the children page content gets displayed below the nav bar.
+- We decided to use Next.js, as it is a recently introduced tool that makes web development much simpler. By using Next.js, any children folders of the app folder becomes the directory link name that can be used for routing, much easier than how routing can be implemented in normal React and node.js usage.
+- We used layout.jsx file to set a standardized rendered structure for all children files of the app folder so that the navigation bar is always at the top of the page and the children page content gets displayed below the nav bar.
 
-![layout.jsx](./public/assets/2.png)
-One of the children files of the app folder is the page.jsx, used for home page content.
+![2](./public/assets/2.png)
 
-![layout.jsx](./public/assets/3.png)
-By creating components, they can be reused in each individual page. For instance, this Nav.jsx component can be placed in the Layout.jsx in the app folder, such that every page in the folder will have the navigation bar without a need to create it again for each page.
+- One of the children files of the app folder is the page.jsx, used for home page content.
 
-States allow us to create dynamic and interactive components without the need for re-rendering the entire page. React will re-render that specific component to update the state, reducing the amount of rendering and hence speed.
+![3](./public/assets/3.png)
+
+- By creating components, they can be reused in each individual page. For instance, this Nav.jsx component can be placed in the Layout.jsx in the app folder, such that every page in the folder will have the navigation bar without a need to create it again for each page.
+- States allow us to create dynamic and interactive components without the need for re-rendering the entire page. React will re-render that specific component to update the state, reducing the amount of rendering and hence speed.
 
 ### Screenshots of currently updated project (Dynamic web sizing implemented)
 
 When in big screen mode:
-![layout.jsx](./public/assets/4.png)
-When in large screen, all the nav bar buttons are displayed fully.
-Once each page button of the nav bar is clicked, it’s routed to a new page with the respective pages that serve the purpose of their names.
+
+##
+
+![4](./public/assets/4.png)
+
+- When in large screen, all the nav bar buttons are displayed fully.
+  Once each page button of the nav bar is clicked, it’s routed to a new page with the respective pages that serve the purpose of their names.
 
 When in small screen mode:
-![layout.jsx](./public/assets/5.png)
-By creating 2 different display modes depending on window/screen size, we are able to customize the page to suit the needs of the screen size. For instance, the display with the buttons is more suitable for a larger screen, whereas it will be moved under a dropdown menu if the screen is smaller to maintain aesthetics.
+
+##
+
+![5](./public/assets/5.png)
+
+- By creating 2 different display modes depending on window/screen size, we are able to customize the page to suit the needs of the screen size. For instance, the display with the buttons is more suitable for a larger screen, whereas it will be moved under a dropdown menu if the screen is smaller to maintain aesthetics.
 
 ### Activity diagram (in the perspective of the user)
 
