@@ -1,8 +1,8 @@
 const Home = () => {
   return (
     <section className="w-full flex-center flex-col">
-      <h1 className="head_text text-center pinkyellow_gradient">UHC@HOME
-        <br className = "" />
+      <h1 className="head_text text-center pinkyellow_gradient font-inter">UHC@HOME
+        <br />
         <span className="greenblue_gradient">TAGLINE THAT I CAN'T THINK OF</span>
       </h1>
 
