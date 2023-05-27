@@ -35,7 +35,7 @@ const Nav = () => {
         </Link>
         <Link
           href="/contact"
-          className="dropdown_link"
+          className=""
           onClick = {() => setToggleDropdown(false)}
         >
           Contact Us
@@ -43,7 +43,7 @@ const Nav = () => {
 
         <Link
           href="faq"
-          className="dropdown_link"
+          className=""
           onClick = {() => setToggleDropdown(false)}
         >
           FAQ

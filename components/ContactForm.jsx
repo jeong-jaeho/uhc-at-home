@@ -32,8 +32,8 @@ function ContactForm() {
 
   return (
     <div>
-      <h1 style={{fontWeight: "bold"}}>For any queries or feedback, please send us an email here!</h1><br/>
-        <form onSubmit={handleSubmit} className=''>
+      <h1 className='font-mono flex-center'>For any queries or feedback, please send us an email here!</h1><br/>
+        <form onSubmit={handleSubmit} className='font-mono'>
           <label htmlFor="name">Name:</label><br/>
           <input
             type="text"
@@ -42,7 +42,8 @@ function ContactForm() {
             onChange={(e) => setName(e.target.value)}
             required
             className="form_input"
-          /><br />
+          />
+          <br />
 
           <label htmlFor="email">Email:</label><br/>
           <input
@@ -52,7 +53,8 @@ function ContactForm() {
             onChange={(e) => setEmail(e.target.value)}
             required
             className="form_input"
-          /><br />
+          />
+          <br />
 
           <label htmlFor="subject">Subject:</label><br/>
           <input
@@ -62,7 +64,8 @@ function ContactForm() {
             onChange={(e) => setSubject(e.target.value)}
             required
             className="form_input"
-          /><br />
+          />
+          <br />
 
 
           <label htmlFor="message">Message:</label><br />
@@ -73,7 +76,8 @@ function ContactForm() {
             rows="5"
             required
             className="form_input"
-          ></textarea><br />
+          ></textarea>
+          <br />
 
           <button type="submit" className='black_btn'>
             Send

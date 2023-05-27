@@ -101,6 +101,14 @@
   @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
 }
 
+.greenblue_gradient {
+  @apply bg-gradient-to-r from-green-300 to-blue-300 bg-clip-text text-transparent;
+}
+
+.pinkyellow_gradient {
+  @apply bg-gradient-to-r from-pink-300 to-yellow-300 bg-clip-text text-transparent;
+}
+
 .desc {
   @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;
 }
