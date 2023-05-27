@@ -55,14 +55,20 @@ https://github.com/itsNatTan/UHC-HOME
 React/Next.js
 
 - Using React hooks and a collection of JS, CSS, and JSX files
-  PostgresSQL
+
+PostgresSQL
+
 - Database system for storing user login ID and password as well as live updating the number of people in the queue for UHC consultations
   GitHub/GitHub Desktop
 - Source Control
-  Postman
+
+Postman
+
 - To be used for backend testing, sending requests to the server, and receiving the response back from the server
 - To connect to PostgresSQL database and allow pulling of data
-  Telegram chatbot API/TeleBot package
+
+Telegram chatbot API/TeleBot package
+
 - Additional feature to be added later for dealing with commonly asked questions and providing answers and guidance
 
 ### Activity diagram (in the perspective of the user)
