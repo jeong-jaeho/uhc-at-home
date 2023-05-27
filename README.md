@@ -89,18 +89,14 @@ https://github.com/itsNatTan/UHC-HOME
 
 ### Screenshots of currently updated project (Dynamic web sizing implemented)
 
-When in big screen mode:
-
-##
+When in big screen mode: <br/>
 
 ![4](./public/assets/4.png)
 
 - When in large screen, all the nav bar buttons are displayed fully.
   Once each page button of the nav bar is clicked, it’s routed to a new page with the respective pages that serve the purpose of their names.
 
-When in small screen mode:
-
-##
+When in small screen mode: <br/>
 
 ![5](./public/assets/5.png)
 
