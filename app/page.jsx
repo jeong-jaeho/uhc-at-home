@@ -15,8 +15,8 @@ const Home = () => {
 
       {/* UHC pictures */}
       <div className="flex-between w-full mg-16 pt-3">
-        <img src="../public/uhc1.png" alt="UHC picture" />
-        <img src="../public/uhc2.png" alt="UHC logo" />
+        <img src="/assets/uhc1.png" alt="UHC picture" class="w-1/2"/>
+        <img src="/assets/uhc2.png" alt="UHC logo" class="w-1/2"/>
       </div>
     </section>
   );

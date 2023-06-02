@@ -11,7 +11,7 @@ function About() {
         key="m1"
         id="m1"
         image="/assets/jaeho.jpg"
-        title="Jaeho Jeong"
+        title="Jaeho Jeong" 
       />
 
       <DisplayItem
