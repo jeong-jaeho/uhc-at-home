@@ -1,29 +1,29 @@
-import '@styles/globals.css';
+import "@styles/globals.css";
 import Nav from "@components/Nav";
 import Provider from "@components/Provider";
 
 export const metadata = {
   title: "UHC@HOME",
-  description: 'Bringing the doctor to you!'
-}
+  description: "Making UHC accessible right in your own room!",
+};
 
 const RootLayout = ({ children }) => {
   return (
-    <html lang = "en">
-        <body>
-          <Provider>
-          <div className = "main">
-            <div className = "gradient" />
+    <html lang="en">
+      <body>
+        <Provider>
+          <div className="main">
+            <div className="gradient" />
           </div>
 
-          <main className = "app">
+          <main className="app">
             <Nav />
             {children}
           </main>
-          </Provider>
-        </body>
+        </Provider>
+      </body>
     </html>
-  )
-}
+  );
+};
 
 export default RootLayout;
