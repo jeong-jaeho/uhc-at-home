@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 const Nav = () => {
-  const isLoggedIn = true;
+  const [isLoggedIn, setLoggedIn ] = useState(true);
 
   const [providers, setProviders] = useState(null);
   const [toggleDropdown, setToggleDropdown] = useState(false);
@@ -19,6 +19,11 @@ const Nav = () => {
     };
     setProviders();
   }, []);
+
+  const signOutTest = () => {
+    setLoggedIn(!isLoggedIn);
+    alert(isLoggedIn);
+  }
 
   return (
     <nav className="flex-between w-full mg-16 pt-3">
@@ -64,7 +69,7 @@ const Nav = () => {
               Queue Now
             </Link>
 
-            <button type="button" onClick={signOut} className="outline_btn">
+            <button type="button" onClick={signOutTest} className="outline_btn">
               Sign Out
             </button>
 
@@ -79,19 +84,23 @@ const Nav = () => {
             </Link>
           </div>
         ) : (
-          <>
-            {providers &&
-              Object.values(providers).map((provider) => (
+          <div className="flex gap-3 md:gap-5">
+          
                 <button
                   type="button"
-                  key={provider.name}
-                  onClick={() => signIn(provider.id)}
+                  onClick={signOutTest}
                   className="black_btn"
                 >
                   Sign In
                 </button>
-              ))}
-          </>
+                <button
+                  type = "button"
+                  onClick ={alert("You have tried to sign up")}
+                  className="outline_btn">
+                    Sign Up
+                </button>
+              
+          </div>
         )}
       </div>
 
@@ -130,7 +139,7 @@ const Nav = () => {
                   type="button"
                   onClick={() => {
                     setToggleDropdown(false);
-                    signOut();
+                    signOutTest();
                   }}
                   className="mt-5 w-full black_btn"
                 >
@@ -140,19 +149,21 @@ const Nav = () => {
             )}
           </div>
         ) : (
-          <>
-            {providers &&
-              Object.values(providers).map((provider) => (
+          <div className="flex gap-3">
                 <button
                   type="button"
-                  key={provider.name}
-                  onClick={() => signIn(provider.id)}
+                  onClick={signOutTest}
                   className="black_btn"
                 >
                   Sign In
                 </button>
-              ))}
-          </>
+                <button
+                  type = "button"
+                  onClick ={alert("You have tried to sign up")}
+                  className="outline_btn">
+                    Sign Up
+                </button>
+          </div>
         )}
       </div>
     </nav>
