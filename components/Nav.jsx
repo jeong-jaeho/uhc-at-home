@@ -6,10 +6,9 @@ import { useState, useEffect } from "react";
 
 const Nav = () => {
   const [isLoggedIn, setLoggedIn ] = useState(true);
-
   const [toggleDropdown, setToggleDropdown] = useState(false);
 
-
+  
   const signOut = () => {
     setLoggedIn(false);
     auth.signOut;
