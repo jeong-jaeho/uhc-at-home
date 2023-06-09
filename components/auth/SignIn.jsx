@@ -14,7 +14,6 @@ const SignIn = () => {
       signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
-        alert("Welcome back" + userCredential.name);
       }).catch((error) => {
         console.log(error);
         alert(error);

@@ -16,8 +16,10 @@ const SignUp = () => {
         console.log(userCredential);
         alert("Signed Up");
       }).catch((error) => {
-        console.log(error);
-        alert("Failed to Signed Up");
+        if (error == "auth/invalid-email") {alert("Please enter a valid email")}
+        else if (error == "auth/user-not-found") {alert("There is no user associated with this email")}
+        else if (error == "auth/wrong-password") {alert("Incorrect password")}
+        else {alert(error);}
       });
     }
   return (
