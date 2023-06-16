@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { toast } from "react-hot-toast";
 
 function ContactForm() {
   const [name, setName] = useState('');
@@ -21,10 +22,9 @@ function ContactForm() {
 
     emailjs.sendForm("service_xf725qi", "template_2va15ao", e.target, "wH0cTcKyXxGeyTsgQ" )
     .then((result) => {
-      console.log(result.text)
-      alert("Email has been sent");
+      toast.success('Email has been sent!');
     }, (error) => {
-      console.log(error.text)
+      toast.error(error);
     });
     resetField();
     e.target.reset();
@@ -32,8 +32,8 @@ function ContactForm() {
 
   return (
     <div>
-      <h1 className='font-mono flex-center'>For any queries or feedback, please send us an email here!</h1><br/>
-        <form onSubmit={handleSubmit} className='font-mono'>
+      <h1 className='flex flex-center w-full'>For any queries or feedback, please send us an email here!</h1><br/>
+        <form onSubmit={handleSubmit}> 
           <label htmlFor="name">Name:</label><br/>
           <input
             type="text"
