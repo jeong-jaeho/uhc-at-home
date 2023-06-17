@@ -31,8 +31,8 @@ const Button: React.FC<ButtonProps> = ({
         hover:opacity-80
         transition
         w-full
-        ${outline? 'bg-white hover:bg-black' : 'bg-teal-400 hover:bg-rose-500'}
-        ${outline? 'border-black hover:border-white' : 'border-teal-400 hover:border-rose-500'}
+        ${outline? 'bg-white hover:bg-black' : 'bg-teal-400'}
+        ${outline? 'border-black hover:border-white' : 'border-teal-400'}
         ${outline? 'text-black hover:text-white' : 'text-white'}
         ${small? 'py-1' : 'py-3'}
         ${small? 'text-sm' : 'text-md'}
@@ -41,7 +41,7 @@ const Button: React.FC<ButtonProps> = ({
         {Icon && (
             <Icon
                 size={24}
-                className='
+                className=' 
                 absolute
                 left-4
                 top-3'

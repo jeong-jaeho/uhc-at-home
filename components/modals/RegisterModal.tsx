@@ -43,7 +43,7 @@ const RegisterModal= () => {
     const handleCheck = () => {
       setIsChecked(!isChecked)
     }
-  
+    
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
       setIsLoading(true);
   

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
 import Button from "../Button";
+import { toast } from "react-hot-toast";
 
 interface ModalProps {
   isOpen?: boolean;
@@ -59,8 +60,8 @@ const Modal: React.FC<ModalProps> = ({
     if (disabled || !secondaryAction) {
       return;
     }
-
     secondaryAction();
+    
   }, [secondaryAction, disabled]);
 
   if (!isOpen) {

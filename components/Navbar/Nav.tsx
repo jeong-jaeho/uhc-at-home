@@ -6,10 +6,10 @@ import { useState, useEffect } from "react";
 import Container from "./Container"
 import Logo from "./Logo";
 import UserMenu from "./UserMenu";
-import { User } from "@prisma/client";
+import { SafeUser } from "../../app/types";
 
 interface NavProps {
-    currentUser ?: User | null;
+    currentUser ?: SafeUser | null;
 }
 
 const Nav: React.FC<NavProps> = ({
