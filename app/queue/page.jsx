@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Calendar from "../../components/Calendar/Calendar";
 
 const queue = () => {
   return (
-    <div>queue</div>
-  )
-}
+    <>
+      <Calendar />
+    </>
+  );
+};
 
-export default queue
+export default queue;
