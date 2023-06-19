@@ -7,8 +7,26 @@ import nat from "../../public/assets/nat.png";
 const About = () => {
   return (
     <section>
-      <p className="text-center text-2xl font-bold">Creators of UHC@HOME</p>
-      <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
+      <p className="text-center text-2xl font-bold mb-20">Project info</p>
+      <div className="flex flex-col text-center">
+        <a
+          href="https://github.com/itsNatTan/UHC-HOME"
+          className="w-full mg-16 pt-3"
+        >
+          github repo
+        </a>
+        <a
+          href="https://docs.google.com/document/d/1suMQAzlMDCM6jUfIWZu7__eeOEl6_sBdLZPNE8-vbx4/edit?usp=sharing"
+          className="w-full mg-16 pt-3"
+        >
+          README
+        </a>
+      </div>
+      <br />
+      <p className="text-center text-2xl font-bold mt-20">
+        Creators of UHC@HOME
+      </p>
+      <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
         <div className="md:mt-2 md:w-1/2">
           <Image
             src={jaeho}
@@ -45,7 +63,7 @@ const About = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
+      <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
         <div className="md:mt-2 md:w-1/2">
           <Image
             src={nat}
