@@ -36,7 +36,12 @@ const About = () => {
             href="https://github.com/jeong-jaeho"
             className="w-full mg-16 pt-3"
           >
-            <img src="/assets/github.png" width="70" height="70" />
+            <img
+              src="/assets/github.png"
+              width="70"
+              height="70"
+              className="hover:-translate-y-1 transition-transform cursor-pointer"
+            />
           </a>
         </div>
       </div>
@@ -65,7 +70,12 @@ const About = () => {
           I'm interested in back-end development!
           <br />
           <a href="https://github.com/itsNatTan" className="w-full mg-16 pt-3">
-            <img src="/assets/github.png" width="70" height="70" />
+            <img
+              src="/assets/github.png"
+              width="70"
+              height="70"
+              className="hover:-translate-y-1 transition-transform cursor-pointer"
+            />
           </a>
         </div>
       </div>
