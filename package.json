@@ -30,7 +30,7 @@
     "postcss": "8.4.23",
     "postgres": "3.3.4",
     "react": "18.2.0",
-    "react-calendar": "4.3.0",
+    "react-calendar": "^4.3.0",
     "react-dom": "18.2.0",
     "react-hook-form": "7.44.3",
     "react-hot-toast": "2.4.1",
