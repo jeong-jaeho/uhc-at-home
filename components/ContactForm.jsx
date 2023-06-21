@@ -33,7 +33,7 @@ function ContactForm() {
   return (
     <div>
       <h1 className='flex flex-center w-full'>For any queries or feedback, please send us an email here!</h1><br/>
-        <form onSubmit={handleSubmit}> 
+        <form onSubmit={handleSubmit} className='justify-center px-10 sm:px-20 lg:px-60 md:px-40'> 
           <label htmlFor="name">Name:</label><br/>
           <input
             type="text"
