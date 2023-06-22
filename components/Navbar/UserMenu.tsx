@@ -28,7 +28,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
-        <div
+        {currentUser ? (<div
           onClick={() => router.push("/queue")}
           className="
                     hidden
@@ -43,7 +43,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                     cursor-pointer"
         >
           Queue
-        </div>
+        </div> ) : (<div className='w-14'/>)}
 
         <div
           onClick={toggleOpen}
