@@ -1,12 +1,9 @@
 import React from "react";
 import Calendar from "../../components/Calendar/Calendar";
+import ClientOnly from "../../components/ClientOnly";
 
 const queue = () => {
-  return (
-    <>
-      <Calendar />
-    </>
-  );
+  return <div>hello</div>;
 };
 
 export default queue;
