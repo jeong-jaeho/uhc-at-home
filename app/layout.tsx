@@ -23,7 +23,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className="font-inter">
         <ClientOnly>
-          <div className="mt-16">
+          <div className="">
             <ToasterProvider />
             <LoginModal />
             <RegisterModal />

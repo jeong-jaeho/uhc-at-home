@@ -8,6 +8,7 @@ import Logo from "./Logo";
 import UserMenu from "./UserMenu";
 import { SafeUser } from "../../app/types";
 import Categories from "./Categories";
+import { usePathname } from "next/navigation";
 
 interface NavProps {
   currentUser?: SafeUser | null;
@@ -15,25 +16,23 @@ interface NavProps {
 
 const Nav: React.FC<NavProps> = ({ currentUser }) => {
   return (
-    <nav className="w-full flex-between mg-16 pt-8">
-      <div
-        className="
+    <div
+      className="
       fixed
       w-full
       bg-white 
-      z-10
       shadow-sm
     "
-      >
-        <div
-          className="
+    >
+      <div
+        className="
         py-3
         border-b-[1px]
       "
-        >
-          <Container>
-            <div
-              className="
+      >
+        <Container>
+          <div
+            className="
             flex
             flex-row
             items-center
@@ -41,28 +40,27 @@ const Nav: React.FC<NavProps> = ({ currentUser }) => {
             gap-3
             md:gap-0
           "
-            >
-              <Logo />
-              <div className="flex flex-row gap-20">
-                <Link href="/about" className="dropdown_link">
-                  About
-                </Link>
+          >
+            <Logo />
+            <div className="flex flex-row gap-20">
+              <Link href="/about" className="dropdown_link">
+                About
+              </Link>
 
-                <Link href="/contact" className="dropdown_link">
-                  Contact Us
-                </Link>
+              <Link href="/contact" className="dropdown_link">
+                Contact Us
+              </Link>
 
-                <Link href="faq" className="dropdown_link">
-                  FAQ
-                </Link>
-              </div>
-              <UserMenu currentUser={currentUser} />
+              <Link href="faq" className="dropdown_link">
+                FAQ
+              </Link>
             </div>
-          </Container>
-        </div>
-        <Categories />
+            <UserMenu currentUser={currentUser} />
+          </div>
+        </Container>
       </div>
-    </nav>
+      <Categories />
+    </div>
   );
 };
 
