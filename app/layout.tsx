@@ -6,6 +6,7 @@ import LoginModal from "../components/modals/LoginModal";
 import ToasterProvider from "./providers/ToasterProvider";
 import ClientOnly from "../components/ClientOnly";
 import getCurrentUser from "./actions/getCurrentUser";
+import RentModal from "../components/modals/RentModal";
 
 export const metadata = {
   title: "UHC@HOME",
@@ -25,6 +26,7 @@ export default async function RootLayout({
         <ClientOnly>
           <div className="">
             <ToasterProvider />
+            <RentModal />
             <LoginModal />
             <RegisterModal />
             <Nav currentUser={currentUser} />
