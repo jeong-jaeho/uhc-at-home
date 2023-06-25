@@ -222,8 +222,8 @@ const RentModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="How would you describe yourself?"
-          subtitle="Let your patients know more about you!"
+          title="Give info for your patients!"
+          subtitle="Let your patients know more about you and insert your Zoom link for online consultation!"
         />
         <Input
           id="title"
@@ -271,7 +271,7 @@ const RentModal = () => {
     <Modal
       disabled={isLoading}
       isOpen={rentModal.isOpen}
-      title="Airbnb your home!"
+      title="Register yourself!"
       actionLabel={actionLabel}
       onSubmit={handleSubmit(onSubmit)}
       secondaryActionLabel={secondaryActionLabel}

@@ -40,9 +40,10 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
         {currentUser ? (
-          <div
-            onClick={onRent}
-            className="
+          <div className="flex gap-3">
+            <div
+              onClick={() => router.push("/appointment")}
+              className="
                     hidden
                     md:block
                     text-sm
@@ -53,8 +54,25 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                     hover:bg-neutral-100
                     transition
                     cursor-pointer"
-          >
-            Doctor registration
+            >
+              Book online consultation
+            </div>
+            <div
+              onClick={onRent}
+              className="
+                    hidden
+                    md:block
+                    text-sm
+                    black_btn
+                    py-3
+                    px-4
+                    rounded-full
+                    hover:bg-neutral-100
+                    transition
+                    cursor-pointer"
+            >
+              Doctor registration
+            </div>
           </div>
         ) : (
           <div className="w-14" />
@@ -117,7 +135,10 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                   label="My properties"
                   onClick={() => router.push("/properties")}
                 />
-                <MenuItem label="Airbnb your home" onClick={rentModal.onOpen} />
+                <MenuItem
+                  label="Doctor registration"
+                  onClick={rentModal.onOpen}
+                />
                 <hr />
                 <MenuItem onClick={() => signOut()} label="Log Out" />
               </>

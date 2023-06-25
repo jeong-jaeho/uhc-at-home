@@ -10,7 +10,7 @@ const Home = () => {
         UHC@HOME
         <br />
         <span className="greenblue_gradient">
-          TAGLINE THAT I CAN'T THINK OF
+          BRING UHC TO YOUR HOME
         </span>
       </h1>
       <p className="desc text-center">
