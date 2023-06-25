@@ -105,3 +105,27 @@ When in small screen mode: <br/>
 ### Activity diagram (in the perspective of the user)
 
 ![Activity diagram](./public/assets/activityDiagram.png)
+
+### Milestone 2
+
+- Milestone 2 Poster:
+
+- Milestone 2 Video:
+
+### Technical Documentation
+
+![6](.public/assets/6.jpg)
+![7](.public/assets/7.jpg)
+![8](.public/assets/8.jpg)
+
+- This was the initial state of our navigation bar, as well as the sign in/sign up page. After doing some "market research" (aka asking friends and family), we had decided that it was far too unrefined.
+
+- We then decided to change the sign in/sign up button to an avatar and a dropdown menu, as well as replace the individual pages with a popup modal.
+
+![9](.public/assets/9.png)
+![10](.public/assets/10.png)
+![11](.public/assets/11.png)
+
+- As shown in the above photos, we had also decided to add social sign in/sign up through Google and GitHub, where users can simply authenticate themselves using their existing accounts, rather than signing up with us.
+
+- Side Note: We had changed our initial sign in and sign up from FireBase to MongoDB.
