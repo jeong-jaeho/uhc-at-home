@@ -12,8 +12,8 @@ import Container from "../../components/Container";
 import ListingCard from "../../components/listings/ListingCard";
 
 interface PropertiesClientProps {
-  listings: SafeListing[];
-  currentUser?: SafeUser | null;
+  listings: SafeListing[],
+  currentUser?: SafeUser | null,
 }
 
 const PropertiesClient: React.FC<PropertiesClientProps> = ({
@@ -45,7 +45,7 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
 
   return (
     <Container>
-      <Heading title="Registrations" subtitle="List of your registrations" />
+      <Heading title="My registrations" subtitle="List of your registrations" />
       <div
         className="
           mt-10

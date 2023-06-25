@@ -26,9 +26,9 @@ export default async function RootLayout({
         <ClientOnly>
           <div className="">
             <ToasterProvider />
-            <RentModal />
             <LoginModal />
             <RegisterModal />
+            <RentModal />
             <Nav currentUser={currentUser} />
           </div>
         </ClientOnly>

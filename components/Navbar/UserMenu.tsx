@@ -40,10 +40,9 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
         {currentUser ? (
-          <div className="flex gap-3">
-            <div
-              onClick={() => router.push("/appointment")}
-              className="
+          <div
+            onClick={() => router.push("/appointment")}
+            className="
                     hidden
                     md:block
                     text-sm
@@ -54,25 +53,8 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                     hover:bg-neutral-100
                     transition
                     cursor-pointer"
-            >
-              Book online consultation
-            </div>
-            <div
-              onClick={onRent}
-              className="
-                    hidden
-                    md:block
-                    text-sm
-                    black_btn
-                    py-3
-                    px-4
-                    rounded-full
-                    hover:bg-neutral-100
-                    transition
-                    cursor-pointer"
-            >
-              Doctor registration
-            </div>
+          >
+            Book online consultation
           </div>
         ) : (
           <div className="w-14" />
@@ -128,16 +110,16 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                   onClick={() => router.push("/favorites")}
                 />
                 <MenuItem
-                  label="My reservations"
-                  onClick={() => router.push("/reservations")}
+                  label="Doctor registration (for doctor)"
+                  onClick={rentModal.onOpen}
                 />
                 <MenuItem
-                  label="My registrations"
+                  label="My registrations (for doctor)"
                   onClick={() => router.push("/properties")}
                 />
                 <MenuItem
-                  label="Doctor registration"
-                  onClick={rentModal.onOpen}
+                  label="My consultations (for doctor)"
+                  onClick={() => router.push("/reservations")}
                 />
                 <hr />
                 <MenuItem onClick={() => signOut()} label="Log Out" />

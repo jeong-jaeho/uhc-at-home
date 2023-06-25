@@ -59,7 +59,6 @@ const Nav: React.FC<NavProps> = ({ currentUser }) => {
           </div>
         </Container>
       </div>
-      <Categories />
     </div>
   );
 };

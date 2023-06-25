@@ -10,12 +10,13 @@ const Home = () => {
         UHC@HOME
         <br />
         <span className="greenblue_gradient">
-          BRING UHC TO YOUR HOME
+          BRINGING UHC TO YOUR HOME
         </span>
       </h1>
       <p className="desc text-center">
-        UHC@HOME is a tool designed to streamline the process of seeking medical
-        aid at the University Health Center
+        UHC@HOME is a tool that allows patients to be <br></br>
+        on virtual consultations instead of <br></br>
+        physically going to the University Health Center
       </p>
 
       {/* UHC pictures */}

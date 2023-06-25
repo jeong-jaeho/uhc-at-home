@@ -1,16 +1,15 @@
-import Container from "../../components/Container"
-import ListingCard from "../../components/listings/ListingCard"
-import EmptyState from "../../components/EmptyState" 
+import Container from "../../components/Container";
+import ListingCard from "../../components/listings/ListingCard";
+import EmptyState from "../../components/EmptyState";
+import Categories from "../../components/Navbar/Categories";
 
-import getListings, { 
-  IListingsParams
-} from "../../app/actions/getListings"
-import getCurrentUser from "../../app/actions/getCurrentUser"
-import ClientOnly from "../../components/ClientOnly"
+import getListings, { IListingsParams } from "../../app/actions/getListings";
+import getCurrentUser from "../../app/actions/getCurrentUser";
+import ClientOnly from "../../components/ClientOnly";
 
 interface AppointmentProps {
-  searchParams: IListingsParams
-};
+  searchParams: IListingsParams;
+}
 
 const Appointment = async ({ searchParams }: AppointmentProps) => {
   const listings = await getListings(searchParams);
@@ -26,9 +25,11 @@ const Appointment = async ({ searchParams }: AppointmentProps) => {
 
   return (
     <ClientOnly>
-      <Container>
-        <div 
-          className="
+      <div className="flex flex-col justify-center items-center">
+        <img src="/assets/rates.png" alt="rates of consultations" />
+        <Container>
+          <div
+            className="
             pt-24
             grid 
             grid-cols-1 
@@ -39,18 +40,19 @@ const Appointment = async ({ searchParams }: AppointmentProps) => {
             2xl:grid-cols-6
             gap-8
           "
-        >
-          {listings.map((listing: any) => (
-            <ListingCard
-              currentUser={currentUser}
-              key={listing.id}
-              data={listing}
-            />
-          ))}
-        </div>
-      </Container>
+          >
+            {listings.map((listing: any) => (
+              <ListingCard
+                currentUser={currentUser}
+                key={listing.id}
+                data={listing}
+              />
+            ))}
+          </div>
+        </Container>
+      </div>
     </ClientOnly>
-  )
-}
+  );
+};
 
 export default Appointment;
