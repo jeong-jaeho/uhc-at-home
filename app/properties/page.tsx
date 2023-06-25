@@ -1,4 +1,3 @@
-
 import EmptyState from "../../components/EmptyState";
 import ClientOnly from "../../components/ClientOnly";
 
@@ -11,10 +10,7 @@ const PropertiesPage = async () => {
   const currentUser = await getCurrentUser();
 
   if (!currentUser) {
-    return <EmptyState
-      title="Unauthorized"
-      subtitle="Please login"
-    />
+    return <EmptyState title="Unauthorized" subtitle="Please login" />;
   }
 
   const listings = await getListings({ userId: currentUser.id });
@@ -31,13 +27,10 @@ const PropertiesPage = async () => {
   }
 
   return (
-    <ClientOnly> 
-      <PropertiesClient
-        listings={listings}
-        currentUser={currentUser}
-      />
+    <ClientOnly>
+      <PropertiesClient listings={listings} currentUser={currentUser} />
     </ClientOnly>
   );
-}
- 
+};
+
 export default PropertiesPage;

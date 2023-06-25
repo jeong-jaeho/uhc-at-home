@@ -1,13 +1,9 @@
-'use client';
+"use client";
 
 import { useCallback, useState } from "react";
 import { toast } from "react-hot-toast";
-import { signIn } from 'next-auth/react';
-import { 
-  FieldValues, 
-  SubmitHandler, 
-  useForm
-} from "react-hook-form";
+import { signIn } from "next-auth/react";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillGithub } from "react-icons/ai";
 import { useRouter } from "next/navigation";
@@ -27,63 +23,55 @@ const LoginModal = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
 
-  const { 
-    register, 
+  const {
+    register,
     handleSubmit,
-    formState: {
-      errors,
-    },
+    formState: { errors },
   } = useForm<FieldValues>({
     defaultValues: {
-      email: '',
-      password: ''
+      email: "",
+      password: "",
     },
   });
 
   const handleCheck = () => {
-    setIsChecked(!isChecked)
-  }
+    setIsChecked(!isChecked);
+  };
 
-  
-  const onSubmit: SubmitHandler<FieldValues> = 
-  (data) => {
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
 
-    signIn('credentials', { 
-      ...data, 
+    signIn("credentials", {
+      ...data,
       redirect: false,
-    })
-    .then((callback) => {
+    }).then((callback) => {
       setIsLoading(false);
 
       if (callback?.ok) {
-        toast.success('Logged in');
+        toast.success("Logged in");
         router.refresh();
         loginModal.onClose();
       }
-      
+
       if (callback?.error) {
         toast.error(callback.error);
       }
     });
-  }
+  };
 
   const onToggle = useCallback(() => {
     loginModal.onClose();
     registerModal.onOpen();
-  }, [loginModal, registerModal])
+  }, [loginModal, registerModal]);
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
-      <Heading
-        title="Welcome back"
-        subtitle="Login to your account!"
-      />
+      <Heading title="Welcome back" subtitle="Login to your account!" />
       <Input
         id="email"
         label="Email"
         disabled={isLoading}
-        register={register}  
+        register={register}
         errors={errors}
         required
       />
@@ -97,46 +85,48 @@ const LoginModal = () => {
         required
       />
       <label>
-        <input
-          type="checkbox"
-          checked={isChecked}
-          onChange={handleCheck}
-        />
+        <input type="checkbox" checked={isChecked} onChange={handleCheck} />
         Show your password
       </label>
     </div>
-  )
+  );
 
   const footerContent = (
     <div className="flex flex-col gap-4 mt-3">
       <hr />
-      <Button 
-        outline 
+      <Button
+        outline
         label="Continue with Google"
         icon={FcGoogle}
-        onClick={() => signIn('google')}
+        onClick={() => signIn("google")}
       />
-      <Button 
-        outline 
+      <Button
+        outline
         label="Continue with Github"
         icon={AiFillGithub}
-        onClick={() => signIn('github')}
+        onClick={() => signIn("github")}
       />
-      <div className="
-      text-neutral-500 text-center mt-4 font-light">
-        <p>First time using UHC@Home?
-          <span 
-            onClick={onToggle} 
+      <div
+        className="
+      text-neutral-500 text-center mt-4 font-light"
+      >
+        <p>
+          First time using UHC@Home?
+          <span
+            onClick={onToggle}
             className="
               text-neutral-800
               cursor-pointer 
               hover:underline
             "
-            > Create an account</span>
+          >
+            {" "}
+            Create an account
+          </span>
         </p>
       </div>
     </div>
-  )
+  );
 
   return (
     <Modal
@@ -150,6 +140,6 @@ const LoginModal = () => {
       footer={footerContent}
     />
   );
-}
+};
 
 export default LoginModal;
