@@ -48,7 +48,7 @@ const About = () => {
             at National University of Singapore.
           </p>
           <br />
-          I'm interested in front-end development!
+          I am interested in front-end development!
           <br />
           <a
             href="https://github.com/jeong-jaeho"
@@ -85,7 +85,7 @@ const About = () => {
             at National University of Singapore.
           </p>
           <br />
-          I'm interested in back-end development!
+          I am interested in back-end development!
           <br />
           <a href="https://github.com/itsNatTan" className="w-full mg-16 pt-3">
             <img
