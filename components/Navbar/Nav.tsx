@@ -42,7 +42,7 @@ const Nav: React.FC<NavProps> = ({ currentUser }) => {
           "
           >
             <Logo />
-            <div className="flex flex-row gap-20">
+            <div className="flex flex-row gap-20 absolute left-1/2 transform -translate-x-1/2">
               <Link href="/about" className="dropdown_link">
                 About
               </Link>
