@@ -22,11 +22,12 @@
     "eslint": "8.41.0",
     "eslint-config-next": "^12.0.4",
     "firebase": "9.22.1",
+    "generate": "^0.14.0",
     "i": "0.3.7",
     "leaflet": "^1.9.4",
     "mogodb": "0.0.1-security",
     "mongoose": "7.2.2",
-    "next": "13.4.7-canary.1",
+    "next": "^13.4.7-canary.1",
     "next-auth": "^4.22.1",
     "next-cloudinary": "^4.13.0",
     "npm": "^9.7.2",
@@ -56,7 +57,7 @@
     "@types/react-calendar": "4.1.0",
     "@types/react-date-range": "^1.4.4",
     "@types/react-leaflet": "^3.0.0",
-    "prisma": "4.15.0",
+    "prisma": "^4.15.0",
     "typescript": "^5.1.3"
   }
 }
