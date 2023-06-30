@@ -7,6 +7,7 @@ import ToasterProvider from "./providers/ToasterProvider";
 import ClientOnly from "../components/ClientOnly";
 import getCurrentUser from "./actions/getCurrentUser";
 import RentModal from "../components/modals/RentModal";
+import ProfileModal from "../components/modals/ProfileModal";
 
 export const metadata = {
   title: "UHC@HOME",
@@ -29,6 +30,7 @@ export default async function RootLayout({
             <LoginModal />
             <RegisterModal />
             <RentModal />
+            <ProfileModal />
             <Nav currentUser={currentUser} />
           </div>
         </ClientOnly>

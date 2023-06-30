@@ -26,7 +26,7 @@ export const categories = [
       "This section is for Consultation For Full-time Undergraduates!",
   },
   {
-    label: "Others",  
+    label: "Others",
     icon: FaUsers,
     description: "This section is for Consultation For Others!",
   },
@@ -41,14 +41,6 @@ const Categories = () => {
   return (
     <Container>
       <div
-        // className="
-        //   pt-4
-        //   flex
-        //   flex-row
-        //   items-center
-        //   justify-between
-        //   overflow-x-auto
-        // "
         className={`pt-4 flex flex-row items-center justify-between overflow-x-auto ${
           isMainPage ? "" : "hidden"
         }`}
