@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import SignIn from "@components/auth/SignIn";
-import SignUp from "@components/auth/SignUp";
+import SignIn from "../../components/auth/SignIn"
+import SignUp from "../../components/auth/SignUp"
 import SplitPane, { Pane } from "split-pane-react";
 import "split-pane-react/esm/themes/default.css";
 import { Sign } from "crypto";
