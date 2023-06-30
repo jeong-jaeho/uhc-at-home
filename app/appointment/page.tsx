@@ -6,13 +6,15 @@ import Categories from "../../components/Navbar/Categories";
 import getListings, { IListingsParams } from "../../app/actions/getListings";
 import getCurrentUser from "../../app/actions/getCurrentUser";
 import ClientOnly from "../../components/ClientOnly";
+import { Promise } from "mongoose";
 
 interface AppointmentProps {
-  searchParams: IListingsParams;
+  searchParams: IListingsParams | null;
 }
 
 const Appointment = async ({ searchParams }: AppointmentProps) => {
-  const listings = await getListings(searchParams);
+  let listings = Promise;
+  if (searchParams != null) {listings = await getListings(searchParams);}
   const currentUser = await getCurrentUser();
 
   if (listings.length === 0) {
