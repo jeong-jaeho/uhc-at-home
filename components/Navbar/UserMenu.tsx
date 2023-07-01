@@ -41,26 +41,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
-        {currentUser ? (
-          <div
-            onClick={() => router.push("/appointment")}
-            className="
-                    hidden
-                    md:block
-                    text-sm
-                    black_btn
-                    py-3
-                    px-4
-                    rounded-full
-                    hover:bg-neutral-100
-                    transition
-                    cursor-pointer"
-          >
-            Book online consultation
-          </div>
-        ) : (
-          <div className="w-14" />
-        )}
+        <div className="w-14" />
 
         <div
           onClick={toggleOpen}
