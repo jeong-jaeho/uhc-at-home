@@ -8,13 +8,16 @@ import getCurrentUser from "../../app/actions/getCurrentUser";
 import ClientOnly from "../../components/ClientOnly";
 import { Promise } from "mongoose";
 
+export const dynamic = "force-dynamic";
 interface AppointmentProps {
   searchParams: IListingsParams | null;
 }
 
 const Appointment = async ({ searchParams }: AppointmentProps) => {
   let listings = Promise;
-  if (searchParams != null) {listings = await getListings(searchParams);}
+  if (searchParams != null) {
+    listings = await getListings(searchParams);
+  }
   const currentUser = await getCurrentUser();
 
   if (listings.length === 0) {
