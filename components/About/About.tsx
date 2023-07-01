@@ -47,7 +47,6 @@ const About = () => {
           hasButton={false}
         ></Card>
       </div>
-      <br />
       <p className="text-center text-2xl font-bold mt-20">
         Creators of UHC@HOME
       </p>
