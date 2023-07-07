@@ -26,7 +26,7 @@ export default function page() {
     />
   );
   return (
-  <main className="mx-auto max-w-full px-4 sm:px-6 ">
+  <main className="mx-auto max-w-full px-8 sm:px-10">
     <div className="w-full">
       <p className="text-center text-2xl font-bold mb-10">
         Learn more about UHC@HOME
