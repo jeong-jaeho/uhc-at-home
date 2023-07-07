@@ -1,5 +1,4 @@
 import React from "react";
-import About from "../../components/About/About";
 import Card from "../../components/Card";
 import CreatorIntroduction from "../../components/CreatorIntroduction";
 import jaeho from "../../public/assets/jaeho.jpg"
