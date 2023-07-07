@@ -85,7 +85,12 @@ const LoginModal = () => {
         required
       />
       <label>
-        <input type="checkbox" checked={isChecked} onChange={handleCheck} />
+        <input
+          type="checkbox"
+          checked={isChecked}
+          onChange={handleCheck}
+          className="mr-2"
+        />
         Show your password
       </label>
     </div>
