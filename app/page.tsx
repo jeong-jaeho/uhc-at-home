@@ -2,8 +2,7 @@ import Categories from "../components/Navbar/Categories";
 
 const Home = () => {
   return (
-    <section className="w-full flex-center flex-col">
-      <br />
+    <section className="w-full flex-center flex-col px-4 sm:px-10">
       <h1 className="head_text text-center pinkyellow_gradient font-inter ">
         UHC@HOME
         <br />
@@ -16,7 +15,7 @@ const Home = () => {
       </p>
 
       {/* UHC pictures */}
-      <div className="flex-between w-full mg-16 pt-3">
+      <div className="flex-between pt-10">
         <img src="/assets/uhc1.png" alt="UHC picture" className="w-1/2" />
         <img src="/assets/uhc2.png" alt="UHC logo" className="w-1/2" />
       </div>
