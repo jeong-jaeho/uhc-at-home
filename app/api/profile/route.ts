@@ -21,9 +21,9 @@ export async function POST(request: Request) {
       id: currentUser.id
     },
     data: {
-      name: name,
-      image: imgSrc,
-      hashedPassword: hashedPassword ?
+      name: name || undefined, 
+      image: imgSrc || undefined, 
+      hashedPassword: hashedPassword || undefined
     },
   });
 
