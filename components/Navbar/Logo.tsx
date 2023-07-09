@@ -20,7 +20,7 @@ const Logo = () => {
         />
       </Link>
 
-      <Link href={"/"} className="md:hidden cursor-pointer">
+      <Link href={"/"} className="md:hidden cursor-pointer absolute">
         <AiOutlineHome />
       </Link>
     </>
