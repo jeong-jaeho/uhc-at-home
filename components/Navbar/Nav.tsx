@@ -41,7 +41,7 @@ const Nav: React.FC<NavProps> = ({ currentUser }) => {
           "
           >
             <Logo />
-            <div className="flex flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20 absolute left-1/2 transform -translate-x-1/2">
+            <div className="flex flex-row gap-4 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20 absolute left-1/2 transform -translate-x-1/2">
               <Link href="/about" className="dropdown_link">
                 About
               </Link>
@@ -50,7 +50,7 @@ const Nav: React.FC<NavProps> = ({ currentUser }) => {
                 Contact Us
               </Link>
 
-              <Link href="faq" className="dropdown_link">
+              <Link href="/faq" className="dropdown_link">
                 FAQ
               </Link>
             </div>

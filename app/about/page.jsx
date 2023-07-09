@@ -26,12 +26,12 @@ export default function page() {
     />
   );
   return (
-    <main className="mx-auto max-w-full px-6 sm:px-10">
+    <main className="max-w-full px-6 sm:px-10">
       <div className="w-full">
         <p className="text-center text-2xl font-bold mb-10">
           Learn more about UHC@HOME
         </p>
-        <div className="flex flex-row justify-center text-center gap-20">
+        <div className="flex flex-row justify-center text-center gap-4 sm:gap-8 md:gap-14 lg:gap-20">
           <Card
             header="Our Motivations"
             content={<div className="text-sm">Queue too long :(</div>}
