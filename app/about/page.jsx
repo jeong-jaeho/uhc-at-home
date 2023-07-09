@@ -86,7 +86,7 @@ export default function page() {
           <CreatorIntroduction
             name="Nathanael M. Tan"
             occupation="Computer Science student"
-            interest="full-stack development"
+            interest="algorithms and machine learning"
             github="https://github.com/itsNatTan"
             img={natImage}
           />

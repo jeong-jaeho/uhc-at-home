@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import { redirect } from "next/dist/server/api-utils";
+import Link from "next/link";
 
 interface CreatorIntroductionProps {
   name: string;
@@ -30,12 +32,13 @@ const CreatorIntroduction: React.FC<CreatorIntroductionProps> = ({
         </p>
         <br />I am interested in {interest}!
         <br />
-        <a href={github} className="w-full mg-16 pt-3">
+        <a href={github} className="inline-block">
           <img
             src="/assets/github.png"
             width="70"
             height="70"
             className="hover:-translate-y-1 transition-transform cursor-pointer"
+            alt={"Image of " + { name }}
           />
         </a>
       </div>
