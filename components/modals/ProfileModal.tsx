@@ -8,6 +8,8 @@ import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import useProfileModal from "../../app/hooks/useProfileModal";
 import { useMemo, useState } from "react";
+import ImageUpload from "../inputs/ImageUpload";
+import Heading from "../Heading";
 
 const ProfileModal = () => {
   const router = useRouter();
@@ -19,7 +21,7 @@ const ProfileModal = () => {
     setIsLoading(true);
 
     axios
-      .post("/api/listings", data)
+      .post("/api/profile", data)
       .then(() => {
         toast.success("Profile Updated");
         router.refresh();
@@ -33,7 +35,20 @@ const ProfileModal = () => {
       });
   };
 
-  let bodyContent = <div>Hi</div>;
+  let bodyContent = (
+    <div className="flex flex-col p-6">
+      <div>
+        <Heading title="Update your name" />
+      </div>
+      <div>
+        <Heading title="Change your password" />
+      </div>
+      <div className="flex flex-col gap-3">
+        <Heading title="Update your profile picture" />
+        <ImageUpload onChange={() => {}} value=""></ImageUpload>
+      </div>
+    </div>
+  );
 
   return (
     <Modal
