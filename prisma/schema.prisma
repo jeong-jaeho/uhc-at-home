@@ -45,6 +45,7 @@ model Account {
   @@unique([provider, providerAccountId])
 }
 
+// List of doctors
 model Listing {
   id            String   @id @default(auto()) @map("_id") @db.ObjectId
   title         String
@@ -60,6 +61,7 @@ model Listing {
   reservations Reservation[]
 }
 
+// List of appointments
 model Reservation {
   id         String   @id @default(auto()) @map("_id") @db.ObjectId
   userId     String   @db.ObjectId
@@ -71,4 +73,19 @@ model Reservation {
 
   user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   listing Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
+}
+
+// Addition
+
+model Day {
+  id        String @id @default(cuid()) @map("_id")
+  name      String // monday, tuesday, ...
+  dayOfWeek Int // @see getDay() documentation, 0 for Sunday, 1 for Monday, ...
+  openTime  String
+  closeTime String
+}
+
+model ClosedDay {
+  id   String   @id @default(cuid()) @map("_id")
+  date DateTime @unique
 }
