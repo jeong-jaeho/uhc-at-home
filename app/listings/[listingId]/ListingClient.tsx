@@ -138,6 +138,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
                 md:col-span-3
               "
             >
+              {/* CHANGE THIS COMPONENT TOO */}
               <ListingReservation
                 price={listing.price}
                 totalPrice={totalPrice}
