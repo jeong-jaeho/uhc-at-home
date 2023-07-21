@@ -79,7 +79,7 @@ export default function page() {
           <CreatorIntroduction
             name="Jaeho Jeong"
             occupation="Computer Science student"
-            interest="front-end development"
+            interest="front-end development, computer security, and database systems"
             github="https://github.com/jeong-jaeho"
             img={jaehoImage}
           />
