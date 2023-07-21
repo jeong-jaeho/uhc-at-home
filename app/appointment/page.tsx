@@ -31,7 +31,11 @@ const Appointment = async ({ searchParams }: AppointmentProps) => {
   return (
     <ClientOnly>
       <div className="flex flex-col justify-center items-center">
-        <img src="/assets/rates.png" alt="rates of consultations" />
+        <div className="flex flex-row flex-auto">
+          <img src="/assets/rates.png" alt="rates of consultations" />
+          <img src="/assets/hours.png" alt="operating hours" />
+        </div>
+
         <Container>
           <div
             className="

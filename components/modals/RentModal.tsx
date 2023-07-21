@@ -20,10 +20,10 @@ import Heading from "../Heading";
 
 enum STEPS {
   CATEGORY = 0,
-  // LOCATION = 1,
-  IMAGES = 1,
-  DESCRIPTION = 2,
-  PRICE = 3,
+  LOCATION = 1,
+  IMAGES = 2,
+  DESCRIPTION = 3,
+  PRICE = 4,
 }
 
 const RentModal = () => {
@@ -155,21 +155,21 @@ const RentModal = () => {
     </div>
   );
 
-  // if (step === STEPS.LOCATION) {
-  //   bodyContent = (
-  //     <div className="flex flex-col gap-8">
-  //       <Heading
-  //         title="Where are you from?"
-  //         subtitle="Help patients identify where you are from!"
-  //       />
-  //       <CountrySelect
-  //         value={location}
-  //         onChange={(value) => setCustomValue("location", value)}
-  //       />
-  //       <Map center={location?.latlng} />
-  //     </div>
-  //   );
-  // }
+  if (step === STEPS.LOCATION) {
+    bodyContent = (
+      <div className="flex flex-col gap-8">
+        <Heading
+          title="What time is your consultation?"
+          subtitle="Let your patients know the consultation timing!"
+        />
+        <img src="/assets/hours.png" alt="operating hours" />
+        <CountrySelect
+          value={location}
+          onChange={(value) => setCustomValue("location", value)}
+        />
+      </div>
+    );
+  }
 
   if (step === STEPS.IMAGES) {
     bodyContent = (
@@ -204,7 +204,7 @@ const RentModal = () => {
         <hr />
         <Input
           id="description"
-          label="Description"
+          label="Zoom Link"
           disabled={isLoading}
           register={register}
           errors={errors}

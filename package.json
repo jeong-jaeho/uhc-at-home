@@ -26,6 +26,7 @@
     "i": "0.3.7",
     "leaflet": "^1.9.4",
     "mogodb": "0.0.1-security",
+    "mongodb": "^5.7.0",
     "mongoose": "7.2.2",
     "next": "^13.4.7-canary.1",
     "next-auth": "^4.22.1",
