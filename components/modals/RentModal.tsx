@@ -191,11 +191,11 @@ const RentModal = () => {
       <div className="flex flex-col gap-8">
         <Heading
           title="Give info for your patients!"
-          subtitle="Let your patients know more about you and insert your Zoom link for online consultation!"
+          subtitle="Let your patients know how to address you and insert your Zoom link for online consultation!"
         />
         <Input
           id="title"
-          label="Title"
+          label="Title and name"
           disabled={isLoading}
           register={register}
           errors={errors}
@@ -204,7 +204,7 @@ const RentModal = () => {
         <hr />
         <Input
           id="description"
-          label="Zoom Link"
+          label="Zoom link"
           disabled={isLoading}
           register={register}
           errors={errors}
@@ -221,6 +221,7 @@ const RentModal = () => {
           title="Now, set your consultation price"
           subtitle="How much do you charge per consultation?"
         />
+        <img src="/assets/rates.png" alt="consultation fee charges" />
         <Input
           id="price"
           label="Price"
