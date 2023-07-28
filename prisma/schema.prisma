@@ -45,6 +45,7 @@ model Account {
   @@unique([provider, providerAccountId])
 }
 
+// List of doctors
 model Listing {
   id            String   @id @default(auto()) @map("_id") @db.ObjectId
   title         String
@@ -52,9 +53,6 @@ model Listing {
   imageSrc      String
   createdAt     DateTime @default(now())
   category      String
-  roomCount     Int
-  bathroomCount Int
-  guestCount    Int
   locationValue String
   userId        String   @db.ObjectId
   price         Int
@@ -63,6 +61,7 @@ model Listing {
   reservations Reservation[]
 }
 
+// List of appointments
 model Reservation {
   id         String   @id @default(auto()) @map("_id") @db.ObjectId
   userId     String   @db.ObjectId

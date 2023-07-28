@@ -2,8 +2,6 @@
 
 import Select from "react-select";
 
-import useCountries from "../../app/hooks/useCountries";
-
 export type CountrySelectValue = {
   flag: string;
   label: string;
@@ -18,14 +16,45 @@ interface CountrySelectProps {
 }
 
 const CountrySelect: React.FC<CountrySelectProps> = ({ value, onChange }) => {
-  const { getAll } = useCountries();
+  const options = [
+    { value: "08:30", label: "AM" },
+    { value: "08:45", label: "AM" },
+    { value: "09:00", label: "AM" },
+    { value: "09:15", label: "AM" },
+    { value: "09:30", label: "AM" },
+    { value: "09:45", label: "AM" },
+    { value: "10:00", label: "AM" },
+    { value: "10:15", label: "AM" },
+    { value: "10:30", label: "AM" },
+    { value: "10:45", label: "AM" },
+    { value: "11:00", label: "AM" },
+    { value: "11:15", label: "AM" },
+    { value: "11:30", label: "AM" },
+    { value: "11:45", label: "AM" },
+    { value: "13:30", label: "PM" },
+    { value: "13:45", label: "PM" },
+    { value: "14:00", label: "PM" },
+    { value: "14:15", label: "PM" },
+    { value: "14:30", label: "PM" },
+    { value: "14:45", label: "PM" },
+    { value: "15:00", label: "PM" },
+    { value: "15:15", label: "PM" },
+    { value: "15:30", label: "PM" },
+    { value: "15:45", label: "PM" },
+    { value: "16:00", label: "PM" },
+    { value: "16:15", label: "PM" },
+    { value: "16:30", label: "PM" },
+    { value: "16:45", label: "PM" },
+    { value: "17:00", label: "PM" },
+    { value: "17:15", label: "PM" },
+  ];
 
   return (
     <div>
       <Select
         placeholder="Anywhere"
         isClearable
-        options={getAll()}
+        options={options}
         value={value}
         onChange={(value) => onChange(value as CountrySelectValue)}
         formatOptionLabel={(option: any) => (
@@ -33,11 +62,7 @@ const CountrySelect: React.FC<CountrySelectProps> = ({ value, onChange }) => {
             className="
           flex flex-row items-center gap-3"
           >
-            <div>{option.flag}</div>
-            <div>
-              {option.label},
-              <span className="text-neutral-500 ml-1">{option.region}</span>
-            </div>
+            <div>{option.value}</div>
           </div>
         )}
         classNames={{

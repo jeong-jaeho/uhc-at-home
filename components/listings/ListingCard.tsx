@@ -34,6 +34,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
   const router = useRouter();
   const { getByValue } = useCountries();
 
+  // LOCATIONVALUE CHANGE
   const location = getByValue(data.locationValue);
 
   const handleCancel = useCallback(
@@ -106,7 +107,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
           </div>
         </div>
         <div className="font-semibold text-lg">
-          {location?.region}, {location?.label}
+          {data.locationValue}
         </div>
         <div className="font-light text-neutral-500">
           {reservationDate || data.category}

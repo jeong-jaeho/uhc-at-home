@@ -6,13 +6,18 @@ import Categories from "../../components/Navbar/Categories";
 import getListings, { IListingsParams } from "../../app/actions/getListings";
 import getCurrentUser from "../../app/actions/getCurrentUser";
 import ClientOnly from "../../components/ClientOnly";
+import { Promise } from "mongoose";
 
+export const dynamic = "force-dynamic";
 interface AppointmentProps {
-  searchParams: IListingsParams;
+  searchParams: IListingsParams | null;
 }
 
 const Appointment = async ({ searchParams }: AppointmentProps) => {
-  const listings = await getListings(searchParams);
+  let listings = Promise;
+  if (searchParams != null) {
+    listings = await getListings(searchParams);
+  }
   const currentUser = await getCurrentUser();
 
   if (listings.length === 0) {
@@ -26,7 +31,11 @@ const Appointment = async ({ searchParams }: AppointmentProps) => {
   return (
     <ClientOnly>
       <div className="flex flex-col justify-center items-center">
-        <img src="/assets/rates.png" alt="rates of consultations" />
+        <div className="flex flex-row flex-auto">
+          <img src="/assets/rates.png" alt="rates of consultations" />
+          <img src="/assets/hours.png" alt="operating hours" />
+        </div>
+
         <Container>
           <div
             className="

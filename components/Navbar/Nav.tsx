@@ -22,6 +22,7 @@ const Nav: React.FC<NavProps> = ({ currentUser }) => {
       w-full
       bg-white 
       shadow-sm
+      px-6
     "
     >
       <div
@@ -37,12 +38,10 @@ const Nav: React.FC<NavProps> = ({ currentUser }) => {
             flex-row
             items-center
             justify-between
-            gap-3
-            md:gap-0
           "
           >
             <Logo />
-            <div className="flex flex-row gap-20">
+            <div className="flex flex-row gap-4 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20 absolute left-1/2 transform -translate-x-1/2">
               <Link href="/about" className="dropdown_link">
                 About
               </Link>
@@ -51,7 +50,7 @@ const Nav: React.FC<NavProps> = ({ currentUser }) => {
                 Contact Us
               </Link>
 
-              <Link href="faq" className="dropdown_link">
+              <Link href="/faq" className="dropdown_link">
                 FAQ
               </Link>
             </div>
