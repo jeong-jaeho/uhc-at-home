@@ -77,7 +77,7 @@ export default function page() {
                     className="text-blue-400"
                   >
                     <b>
-                      <em> here!</em>
+                      <em> &nbsp;here!</em>
                     </b>
                   </Link>
                 </p>
@@ -94,7 +94,7 @@ export default function page() {
                       href="https://github.com/itsNatTan/UHC-HOME"
                       className="text-blue-400 font-bold italic"
                     >
-                      here!
+                      &nbsp;here!
                     </a>
                 </p>
             </div>

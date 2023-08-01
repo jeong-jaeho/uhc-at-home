@@ -17,7 +17,7 @@ const faq = () => {
           className="text-blue-500"
         >
           <b>
-            <em>click here!</em>
+            <em>&nbsp;click here!</em>
           </b>
         </a>
       </div>
