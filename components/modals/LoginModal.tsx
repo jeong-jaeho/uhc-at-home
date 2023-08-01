@@ -89,7 +89,7 @@ const LoginModal = () => {
           type="checkbox"
           checked={isChecked}
           onChange={handleCheck}
-          className="mr-2"
+          className="me-2"
         />
         Show your password
       </label>

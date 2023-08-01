@@ -4,6 +4,9 @@ import FaqCard from "../../components/FaqCard";
 const faq = () => {
   return (
     <div className="w-full flex flex-col px-20 gap-3">
+      <p className="text-center text-2xl font-bold mb-10">
+        FAQs
+      </p>
       <FaqCard header="Pricing" />
       <FaqCard header="Services" />
       <div className="flex-center w-full mg-16 pt-3">

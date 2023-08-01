@@ -89,7 +89,7 @@ const RegisterModal = () => {
         required
       />
       <label>
-        <input type="checkbox" checked={isChecked} onChange={handleCheck} />
+        <input type="checkbox" checked={isChecked} onChange={handleCheck} className="me-2"/>
         Show your password
       </label>
     </div>

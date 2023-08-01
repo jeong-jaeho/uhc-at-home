@@ -75,27 +75,27 @@ const Modal: React.FC<ModalProps> = ({
           items-center 
           flex 
           overflow-x-hidden 
-          overflow-y-auto 
-          fixed 
-          inset-0 
-          z-50 
-          outline-none 
+          fixed
+          inset-0
+          z-50
+          outline-none
           focus:outline-none
           bg-neutral-800/70
         "
       >
         <div
           className="
-          relative 
+          relative
           w-full
           md:w-4/6
           lg:w-3/6
           xl:w-2/5
           my-6
-          mx-auto 
-          h-full 
-          lg:h-auto
-          md:h-auto
+          mx-auto
+          h-screen
+          max-h-screen
+          h-[80%]
+          w-[80%]
           "
         >
           {/*content*/}
@@ -114,16 +114,17 @@ const Modal: React.FC<ModalProps> = ({
               h-full
               lg:h-auto
               md:h-auto
-              border-0 
-              rounded-lg 
-              shadow-lg 
-              relative 
-              flex 
-              flex-col 
-              w-full 
-              bg-white 
-              outline-none 
+              border-0
+              rounded-lg
+              shadow-lg
+              relative
+              flex
+              flex-col
+              w-full
+              bg-white
+              outline-none
               focus:outline-none
+              overflow-y-auto
             "
             >
               {/*header*/}

@@ -29,67 +29,77 @@ export default function page() {
     <main className="max-w-full px-6 sm:px-10">
       <div className="w-full">
         <p className="text-center text-2xl font-bold mb-10">
-          Learn more about UHC@HOME
+          About UHC@HOME
         </p>
-        <div className="flex flex-row justify-center text-center gap-4 sm:gap-8 md:gap-14 lg:gap-20">
-          <Card
-            header="Our Motivations"
-            content={<div className="text-sm">Queue too long :(</div>}
-            hasButton={false}
-          ></Card>
-          <Card
-            header="Our Project Log"
-            content={
-              <div className="text-sm">
-                To learn more about our project, please click
-                <Link
-                  href="https://docs.google.com/document/d/1suMQAzlMDCM6jUfIWZu7__eeOEl6_sBdLZPNE8-vbx4/edit?usp=sharing"
-                  className="text-blue-400"
-                >
-                  <b>
-                    <em> here!</em>
-                  </b>
-                </Link>
-              </div>
-            }
-            hasButton={false}
-          ></Card>
-          <Card
-            header="Our GitHub Repo"
-            content={
-              <div className="text-sm">
-                To see the code for yourself, please click
-                <Link
-                  href="https://github.com/itsNatTan/UHC-HOME"
-                  className="text-blue-400"
-                >
-                  <b>
-                    <em> here!</em>
-                  </b>
-                </Link>
-              </div>
-            }
-            hasButton={false}
-          ></Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 py-10 gap-5">
+          <div className="p-7 bg-green-300 rounded-lg">
+            <p className="text-2xl font-semibold text-center pb-5">Our Mission</p>
+            <p className="text-center">To empower individuals with accessible and personalized healthcare, promoting well-being and happiness.</p>
+          </div>
+          <div className="p-7 border border-4 border-teal-600 rounded-lg">
+            <p className="text-2xl font-semibold text-center pb-5">Our Vision</p>
+            <p className="text-center">Revolutionizing healthcare by delivering convenient virtual care solutions, eliminating the frustration of long queues, and making a positive impact on lives through innovation and empathy.</p>
+          </div>
         </div>
-        <p className="text-center text-2xl font-bold mt-20">
-          Creators of UHC@HOME
-        </p>
-        <div className="flex flex-row justify-items-center space-x-10">
-          <CreatorIntroduction
-            name="Jaeho Jeong"
-            occupation="Computer Science student"
-            interest="front-end development, computer security, and database systems"
-            github="https://github.com/jeong-jaeho"
-            img={jaehoImage}
-          />
-          <CreatorIntroduction
-            name="Nathanael M. Tan"
-            occupation="Computer Science student"
-            interest="algorithms and machine learning"
-            github="https://github.com/itsNatTan"
-            img={natImage}
-          />
+        <div>
+          <p className="text-center text-2xl font-bold mt-20 mb-16">
+            Creators of UHC@HOME
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center space-x-10">
+            <CreatorIntroduction
+              name="Jaeho Jeong"
+              occupation="Computer Science student"
+              interest="front-end development, computer security, and database systems"
+              github="https://github.com/jeong-jaeho"
+              img={jaehoImage}
+            />
+            <CreatorIntroduction
+              name="Nathanael M. Tan"
+              occupation="Computer Science student"
+              interest="algorithms and machine learning"
+              github="https://github.com/itsNatTan"
+              img={natImage}
+            />
+          </div>
+          <div>
+            <p className="text-center text-2xl font-bold mb-16">
+              Learn More
+            </p>
+            <div className="flex justify-center">
+              <div className="flex flex-cols">
+                <p className="text-lg text-end p-7 font-semibold">
+                  Our Project Log
+                </p>
+                <p className="p-7 flex">
+                  To learn more about our project, please click
+                  <Link
+                    href="https://docs.google.com/document/d/1suMQAzlMDCM6jUfIWZu7__eeOEl6_sBdLZPNE8-vbx4/edit?usp=sharing"
+                    className="text-blue-400"
+                  >
+                    <b>
+                      <em> here!</em>
+                    </b>
+                  </Link>
+                </p>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="flex flex-cols">
+                <p className="text-lg text-end p-7 font-semibold">
+                  Our GitHub Repository
+                </p>
+                <p className="p-7 flex">
+                  To see the code for yourself, please click
+                    <a
+                      href="https://github.com/itsNatTan/UHC-HOME"
+                      className="text-blue-400 font-bold italic"
+                    >
+                      here!
+                    </a>
+                </p>
+            </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
