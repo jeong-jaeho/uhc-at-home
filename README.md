@@ -23,13 +23,7 @@ Apollo 11
 
 UHC@HOME (uhc-home.vercel.app)
 https://uhc-home.vercel.app/
-Click the link above to try out our web application.
-
-
-### Code Base
-
-Link to repository:
-https://github.com/itsNatTan/UHC-HOME
+<br> Click the link above to try out our web application.
 
 ### Project Info
 
