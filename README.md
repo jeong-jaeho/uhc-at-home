@@ -22,7 +22,7 @@ Apollo 11
 ### Working Prototype React Web App
 
 UHC@HOME (uhc-home.vercel.app)
-https://uhc-home.vercel.app/
+https://uhc-at-home.vercel.app/
 <br> Click the link above to try out our web application.
 
 ### Project Info
