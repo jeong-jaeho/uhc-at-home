@@ -91,7 +91,7 @@ export default function page() {
                 <p className="p-7 flex">
                   To see the code for yourself, please click
                     <a
-                      href="https://github.com/itsNatTan/UHC-HOME"
+                      href="https://github.com/jeong-jaeho/uhc-at-home"
                       className="text-blue-400 font-bold italic"
                     >
                       &nbsp;here!
