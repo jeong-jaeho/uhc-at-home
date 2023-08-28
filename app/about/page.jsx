@@ -49,7 +49,7 @@ export default function page() {
             <CreatorIntroduction
               name="Jaeho Jeong"
               occupation="Computer Science student"
-              interest="front-end development, computer security, and database systems"
+              interest="full stack development, database systems, data analytics, and product management"
               github="https://github.com/jeong-jaeho"
               img={jaehoImage}
             />
